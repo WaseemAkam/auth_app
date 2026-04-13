@@ -9,7 +9,7 @@ function Dashboard() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    axios.get("http://localhost:3001/api/protected", {
+    axios.get("https://auth-app-f71q.onrender.com/api/protected", {
       headers: { authorization: token }
     })
     .then(res => setMsg(res.data.message))

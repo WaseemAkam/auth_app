@@ -8,7 +8,7 @@ function Admin() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    axios.get("http://localhost:3001/api/admin", {
+    axios.get("https://auth-app-f71q.onrender.com/api/admin", {
       headers: { authorization: token }
     })
     .then(res => setMsg(res.data.message))

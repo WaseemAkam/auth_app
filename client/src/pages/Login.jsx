@@ -20,7 +20,7 @@ function Login() {
     setErrorMsg("");
 
     try {
-      const res = await axios.post("http://localhost:3001/api/login", data);
+      const res = await axios.post("https://auth-app-f71q.onrender.com/api/login", data);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", res.data.user.role);
